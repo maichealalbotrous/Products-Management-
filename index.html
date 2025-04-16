@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUDS</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+</head>
+<body>
+
+
+<header class="container">
+<div>
+<h1 class="col-lg-6 col-md-6 col-sm-6 container">CRUDS</h1>
+<h3 class="col-lg-10 col-md-10 col-sm-10 container"><SPAN class="me-2">CREAT</SPAN><SPAN class="me-2">READ</SPAN><SPAN class="me-2">UPDATE</SPAN><SPAN class="me-2">DELET</SPAN><SPAN>SEARCH</SPAN></h3>
+</div>
+
+</header>
+
+
+<main class="input container">
+
+<div class="the_title ">
+<input class="Title col-sm-10 col-lg-10 col-md-10" type="text" placeholder="Title">
+</div>
+
+<div class=" the_price">
+
+<input onkeyup="Get_total()"  type="number" class="Price col-lg-2 col-md-2 col-sm-2 " placeholder="Price">
+<input onkeyup="Get_total()"  type="number" class="taxses col-lg-2 col-md-2 col-sm-2 " placeholder="taxses">
+<input onkeyup="Get_total()"  type="number" class="Ads col-lg-2 col-md-2 col-sm-2 " placeholder="Ads">
+<input onkeyup="Get_total()"  type="number" class="Discount col-lg-2 col-md-2 col-sm-2 " placeholder="Discount">
+
+<small class=" the_total">Total : <span class="Total_number">100</span></small>
+</div>
+
+<div class="the_count">
+    <input type="number" placeholder="count" class="count container col-sm-10 col-lg-10 col-md-10">
+</div>
+
+<div class="the_category">
+    <input type="text" placeholder="category" class="category container col-sm-10 col-lg-10 col-md-10">
+</div>
+
+<div class="the_creat">
+<button class="Creat  container col-sm-10 col-lg-10 col-md-10">Creat</button>
+<button class="update  container col-sm-10 col-lg-10 col-md-10">update</button>
+
+</div>
+
+<div class="the_search">
+<input onkeyup="getSerch(this.value)"  type="text" placeholder="Search" class="Search container col-sm-10 col-lg-10 col-md-10" >
+</div>
+
+<div class="secrching_type">
+
+    <button onclick="GivId(this.id)" id="Search_by_Title"     class="  me-4 container col-sm-4 col-lg-4 col-md-4">Search<span> By </span>Title</button>
+    <button onclick="GivId(this.id)" id="Search_by_Category"  class= " ms-4  container col-sm-4 col-lg-4 col-md-4">Search<span> By </span>Category</button>
+</div>
+
+</main>  
+<footer class="output container">
+
+<div class="the_delet">
+<button class="Delet container col-sm-10 col-lg-10 col-md-10">Delet_All</button>
+</div>
+
+<div class="table container">
+    <table class="container thetable  col-lg-10 col-md-10 col-sm-10" >
+        <thead> 
+        <tr>
+            <th>TD</th>
+            <th>TITLE</th>
+            <th>PRICE</th>
+            <th>TAXES</th>
+            <th>ADS</th>
+            <th>DISCOUNT</th>
+            <th>TOTAL</th>
+            <th>CATEGORY</th>
+            <th>UPDATE</th>
+            <th>DELET</th>
+        </tr>
+    </thead>
+
+   <tbody class="tbody">
+    <tr>
+     <th>1</th>
+     <th>sumsung</th>
+     <th>2000</th>
+     <th>100</th>
+     <th>100</th>
+     <th>1200</th>
+     <th>1000</th>
+     <th>phone</th>
+     <th><button class="UPDATE">update</button></th>
+     <th><button  class="DELET">delet</button></th>   
+    </tr>
+
+
+
+    <tr>
+        <th>1</th>
+        <th>sumsung</th>
+        <th>2000</th>
+        <th>100</th>
+        <th>100</th>
+        <th>1200</th>
+        <th>1000</th>
+        <th>phone</th>
+        <th><button class="UPDATE">update</button></th>
+        <th><button class="DELET">delet</button></th>   
+       </tr>
+
+
+       <tr>
+        <th>1</th>
+        <th>sumsung</th>
+        <th>2000</th>
+        <th>100</th>
+        <th>100</th>
+        <th>1200</th>
+        <th>1000</th>
+        <th>phone</th>
+        <th><button class="UPDATE">update</button></th>
+        <th><button class="DELET">delet</button></th>   
+       </tr>
+
+
+
+       
+   </tbody>
+</table>
+</div>
+
+
+</footer>
+    
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
